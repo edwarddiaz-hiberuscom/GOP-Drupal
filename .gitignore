@@ -41,7 +41,7 @@ web/themes/contrib/*/node_modules
 
 # Misc
 *.sql
-*.sql.gz
+#*.sql.gz
 *.tar.gz
 *.zip
 phpunit.xml
