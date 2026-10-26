@@ -1,0 +1,47 @@
+# Drupal 11 .gitignore
+
+# Core installation
+/web/core
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+
+# Composer
+/vendor
+composer.phar
+
+# Drupal settings (contains DB credentials / local config)
+/web/sites/*/settings.local.php
+/web/sites/*/services.local.yml
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+
+# Files (public & private uploads)
+/web/sites/*/files
+
+# Ddev local environment
+.ddev/.gitignore
+.ddev/.homeadditions
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Node
+node_modules
+web/core/node_modules
+web/modules/contrib/*/node_modules
+web/themes/contrib/*/node_modules
+
+# Misc
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+phpunit.xml
