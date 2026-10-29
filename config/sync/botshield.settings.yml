@@ -1,0 +1,266 @@
+_core:
+  default_config_hash: H0sDoo6Y1qfsKB7vdC9cujbX6G5l9wzcNfk9FfRrIOM
+langcode: en
+enabled: true
+traffic_scope: anonymous
+enforcement_backend: flood
+threshold_per_minute: 120
+window_seconds: 60
+block_seconds: 900
+whitelist_ips: ''
+override_ips_fid: 0
+override_ips_path: ''
+ip_policies: {  }
+path_group_rules: "^/jsonapi|api\r\n^/api|api\r\n^/search|search\r\n.*|page\r\n"
+group_overrides: "api|60|1800\r\nsearch|30|1800\r\npage|120|900\r\n"
+bot_rules: "google_inspectiontool|\\bGoogle-InspectionTool\\b|98\r\ngoogle_extended|\\bGoogle-Extended\\b|95\r\nadsbot_google|\\bAdsBot-Google\\b|98\r\ngooglebot_image|\\bGooglebot-Image\\b|98\r\ngooglebot_news|\\bGooglebot-News\\b|98\r\ngooglebot_video|\\bGooglebot-Video\\b|98\r\ngoogle_other|\\bGoogleOther\\b|95\r\ngooglebot|\\bGooglebot\\b|95\r\nbingpreview|\\bBingPreview\\b|95\r\nbingbot|\\bBingbot\\b|95\r\nduckduckbot|\\bDuckDuckBot\\b|95\r\napplebot|\\bApplebot\\b|95\r\nopenai_oai_search|\\bOAI-SearchBot\\b|95\r\nopenai_chatgpt_user|\\bChatGPT-User\\b|95\r\nopenai_gptbot|\\bGPTBot\\b|95\r\nanthropic_claudebot|\\bClaudeBot\\b|95\r\nperplexitybot|\\bPerplexityBot\\b|95\r\nyoubot|\\bYouBot\\b|90\r\nccbot|\\bCCBot\\b|90\r\namazonbot|\\bAmazonbot\\b|90\r\nyandexbot|\\bYandexBot\\b|90\r\nbaiduspider|\\bBaiduspider\\b|90\r\nbytespider|\\bBytespider\\b|90\r\npetalbot|\\bPetalBot\\b|90\r\nsogou_spider|Sogou.*spider|85\r\nseznam_bot|\\bSeznamBot\\b|85\r\nnaver_yeti|Yeti\\/|85\r\nqwantify|\\bQwantify\\b|85\r\nyahoo_slurp|\\bSlurp\\b|85\r\nmsnbot|\\bmsnbot\\b|85\r\nexabot|\\bExabot\\b|85\r\nia_archiver|\\bia_archiver\\b|85\r\narchive_org_bot|archive\\.org_bot|85\r\nfacebookexternalhit|facebookexternalhit|95\r\nfacebot|\\bFacebot\\b|95\r\ntwitterbot|\\bTwitterbot\\b|95\r\nlinkedinbot|\\bLinkedInBot\\b|95\r\nslackbot|\\bSlackbot-LinkExpanding\\b|95\r\ndiscordbot|\\bDiscordbot\\b|90\r\ntelegrambot|\\bTelegramBot\\b|90\r\nwhatsapp|\\bWhatsApp\\b|90\r\npinterestbot|\\bPinterestbot\\b|90\r\nredditbot|\\bRedditbot\\b|90\r\nsemrush|\\bSemrushBot\\b|90\r\nahrefs|\\bAhrefsBot\\b|90\r\nmj12bot|\\bMJ12bot\\b|90\r\ndotbot|\\bDotBot\\b|90\r\nblexbot|\\bBLEXBot\\b|90\r\nrogerbot|\\bRogerbot\\b|90\r\ndataforseobot|\\bDataForSeoBot\\b|90\r\n"
+log_unknown_allowed: false
+log_unknown_allowed_sample_rate: 10
+flood_control_enabled: false
+flood_control_threshold_per_minute: 800
+flood_control_window_seconds: 60
+flood_control_block_seconds: 3600
+unknown_flood_control_enabled: false
+unknown_flood_threshold_per_minute: 120
+unknown_flood_window_seconds: 60
+unknown_flood_block_seconds: 1800
+alerts_enabled: false
+alert_watchdog_enabled: false
+alert_email_enabled: false
+alert_email_to: ''
+alert_auto_allow_ip: false
+alert_auto_allow_bot: false
+alert_allow_ips: ''
+alert_allow_bots: ''
+alert_slack_enabled: false
+alert_slack_webhook_url: ''
+alert_cooldown_seconds: 900
+error_429_enabled: true
+error_429_title: 'Help Us Protect [Company Name]'
+error_429_body: "<p>[Company] uses advanced security systems to keep our site safe and prevent misuse or unauthorized access. We've noticed an unusual high number of requests from your connection in a short period of time, which has temporarily limited your access to help protect our platform. </p>\r\n\r\n<p>Please wait a few minutes before trying again. And avoid rapid page reloading or link clicking. We apologize for the inconvenience and appreciate your understanding as we work to keep [Company] secure and available for everyone.</p>"
+error_429_show_retry_after: true
+error_429_contact_email: ''
+error_429_contact_url: ''
+error_429_contact_label: 'Contact us'
+bot_actions:
+  openai_gptbot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  openai_chatgpt_user:
+    action: rate_limit
+    log: false
+    rpm: 30
+  openai_oai_search:
+    action: rate_limit
+    log: false
+    rpm: 30
+  anthropic_claudebot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  perplexitybot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  youbot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  ccbot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  amazonbot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  google_inspectiontool:
+    action: rate_limit
+    log: false
+    rpm: 120
+  google_extended:
+    action: rate_limit
+    log: false
+    rpm: 30
+  adsbot_google:
+    action: rate_limit
+    log: false
+    rpm: 120
+  googlebot_image:
+    action: rate_limit
+    log: false
+    rpm: 120
+  googlebot_news:
+    action: rate_limit
+    log: false
+    rpm: 120
+  googlebot_video:
+    action: rate_limit
+    log: false
+    rpm: 120
+  google_other:
+    action: rate_limit
+    log: false
+    rpm: 120
+  googlebot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  bingbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  bingpreview:
+    action: rate_limit
+    log: false
+    rpm: 120
+  duckduckbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  applebot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  yandexbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  baiduspider:
+    action: rate_limit
+    log: false
+    rpm: 120
+  bytespider:
+    action: rate_limit
+    log: false
+    rpm: 30
+  petalbot:
+    action: rate_limit
+    log: false
+    rpm: 30
+  sogou_spider:
+    action: rate_limit
+    log: false
+    rpm: 120
+  seznam_bot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  naver_yeti:
+    action: rate_limit
+    log: false
+    rpm: 120
+  qwantify:
+    action: rate_limit
+    log: false
+    rpm: 120
+  yahoo_slurp:
+    action: rate_limit
+    log: false
+    rpm: 120
+  msnbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  exabot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  ia_archiver:
+    action: rate_limit
+    log: false
+    rpm: 60
+  archive_org_bot:
+    action: rate_limit
+    log: false
+    rpm: 60
+  facebookexternalhit:
+    action: rate_limit
+    log: false
+    rpm: 120
+  facebot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  twitterbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  linkedinbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  pinterestbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  redditbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  slackbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  discordbot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  telegrambot:
+    action: rate_limit
+    log: false
+    rpm: 120
+  whatsapp:
+    action: rate_limit
+    log: false
+    rpm: 120
+  semrush:
+    action: rate_limit
+    log: false
+    rpm: 60
+  ahrefs:
+    action: rate_limit
+    log: false
+    rpm: 60
+  mj12bot:
+    action: rate_limit
+    log: false
+    rpm: 60
+  dotbot:
+    action: rate_limit
+    log: false
+    rpm: 60
+  blexbot:
+    action: rate_limit
+    log: false
+    rpm: 60
+  rogerbot:
+    action: rate_limit
+    log: false
+    rpm: 60
+  dataforseobot:
+    action: rate_limit
+    log: false
+    rpm: 60
+custom_bots: {  }
+geo_country_headers: ''
+geo_region_headers: ''
+geo_city_headers: ''
+geo_lat_headers: ''
+geo_lon_headers: ''
+geolite2_enabled: false
+geolite2_mmdb_fid: 0
+geolite2_mmdb_path: ''
+freeapi_enabled: false
+freeapi_endpoint: 'https://freeipapi.com/api/json/{ip}'
+freeapi_timeout_seconds: 2
+freeapi_requests_per_window: 30
+freeapi_window_seconds: 60
+caching_mode: auto
+cache_botmatch_days: 30
+cache_geo_days: 7
+cache_block_seconds: 900
+status_cache_selftest: true
+retain_events_days: 14
+retain_blocks_days: 30
